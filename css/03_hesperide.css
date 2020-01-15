@@ -27,7 +27,7 @@
     font-style: italic;
     font-size: 6vh;
     line-height: 80%;
-    text-shadow: 0.3vw 0.3vh 0.6vw #479a9a;
+    text-shadow: 0.3vw 0.3vh 0.6vw #c75366;
     color: white;
   }
 
@@ -36,9 +36,11 @@
     width: inherit;
     height: inherit;
     /*background: linear-gradient(183deg, #edf3f2, #b8d9dd, #f2dede, #f7f1f1) no-repeat center center fixed;*/
-    background: radial-gradient( circle farthest-corner at 50% 130%,  #8fd4d1 0%, #8fd4d1 20%, #f7f2e3 100%) no-repeat center center fixed;
+    /*background: radial-gradient( circle farthest-corner at 50% 130%,  #8fd4d1 0%, #8fd4d1 20%, #f7f2e3 100%) no-repeat center center fixed;*/
+    /*background: radial-gradient( circle farthest-corner at 50% 130%,  #e3985d 0%, #e3985d 20%, #f7f2e3 100%) no-repeat center center fixed;*/
+    background: radial-gradient( circle farthest-corner at 50% 130%,  #db929e 0%, #db929e 20%, #f7f2e3 100%) no-repeat center center fixed;
     /*background: radial-gradient( circle farthest-corner at 50% 130%,  #394242 0%, #394242 20%, #f7f2e3 100%) no-repeat center center fixed;*/
-    /*background: radial-gradient( circle farthest-corner at 50% 130%,  #db929e 0%, #db929e 20%, #f7f2e3 100%) no-repeat center center fixed;*/
+    /*background: radial-gradient( circle farthest-corner at 50% 130%,  #936dad 0%, #936dad 20%, #f7f2e3 100%) no-repeat center center fixed;*/
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -108,5 +110,5 @@
 }
 
 .swiper-pagination-bullet-active{
-  background: #479a9a;
+  background: #c75366;
 }

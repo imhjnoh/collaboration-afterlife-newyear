@@ -1,0 +1,91 @@
+
+  body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+
+  }
+  .bg-container{
+
+
+
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    /*background: linear-gradient(183deg, #edf3f2, #b8d9dd, #f2dede, #f7f1f1) no-repeat center center fixed;*/
+    background: radial-gradient( circle farthest-corner at 50% 130%,  #8fd4d1 0%, #8fd4d1 20%, #f7f2e3 100%) no-repeat center center fixed;
+    /*background: radial-gradient( circle farthest-corner at 50% 130%,  #394242 0%, #394242 20%, #f7f2e3 100%) no-repeat center center fixed;*/
+    /*background: radial-gradient( circle farthest-corner at 50% 130%,  #db929e 0%, #db929e 20%, #f7f2e3 100%) no-repeat center center fixed;*/
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+  }
+
+  .bg-lace {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    background-image: url(../images/header.svg);
+    background-repeat: repeat;
+    background-size: contain;
+    mix-blend-mode: color-burn;
+    opacity: 1.0;
+
+  }
+
+  .bd-paper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/paper-texture.jpg);
+    background-size: cover;
+    mix-blend-mode: color-burn;
+  }
+
+  .swiper-container{
+    /*background-color: black;*/
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+
+    height: 85%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .swiper-wrapper{
+    /*background-color: blue;*/
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: 95%;
+  }
+
+  .swiper-slide{
+    width: inherit;
+    height: 100%;
+  }
+
+  .swiper-slide img{
+    max-width: 100%;
+    max-height: inherit;
+    width: auto;
+    height: inherit;
+
+  }
+
+  .swiper-pagination{
+    padding-top: 100px;
+  }
+
+.swiper-pagination-bullet{
+  mix-blend-mode: multiply;
+}
+
+.swiper-pagination-bullet-active{
+  background: #479a9a;
+}

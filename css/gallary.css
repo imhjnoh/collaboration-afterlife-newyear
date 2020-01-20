@@ -1,3 +1,8 @@
+:root{
+  --main : #8fd4d1;
+  --main-dark : #479a9a;
+  --bgcolor : #f7f2e3;
+}
 
   body{
     margin: 0px;
@@ -27,7 +32,7 @@
     font-style: italic;
     font-size: 6vh;
     line-height: 80%;
-    text-shadow: 0.3vw 0.3vh 0.6vw #479a9a;
+    text-shadow: 0.3vw 0.3vh 0.4vh var(--main-dark);
     color: white;
   }
 
@@ -36,7 +41,7 @@
     width: inherit;
     height: inherit;
     /*background: linear-gradient(183deg, #edf3f2, #b8d9dd, #f2dede, #f7f1f1) no-repeat center center fixed;*/
-    background: radial-gradient( circle farthest-corner at 50% 130%,  #8fd4d1 0%, #8fd4d1 20%, #f7f2e3 100%) no-repeat center center fixed;
+    background: radial-gradient( circle farthest-corner at 50% 130%, var(--main) 0%, var(--main) 10%, var(--bgcolor) 100%) no-repeat center center fixed;
     /*background: radial-gradient( circle farthest-corner at 50% 130%,  #394242 0%, #394242 20%, #f7f2e3 100%) no-repeat center center fixed;*/
     /*background: radial-gradient( circle farthest-corner at 50% 130%,  #db929e 0%, #db929e 20%, #f7f2e3 100%) no-repeat center center fixed;*/
     background-size: cover;
@@ -44,6 +49,24 @@
     -o-background-size: cover;
     -webkit-background-size: cover;
   }
+
+  #particles-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: luminosity;
+  }
+  #particles-container-2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: normal;
+  }
+
 
   .bg-lace {
     position: absolute;
@@ -57,14 +80,17 @@
 
   }
 
-  .bg-paper{
+  .footer-bar{
     position: absolute;
+    bottom: 0%;
     width: 100%;
-    height: 100%;
-    background-image: url(../images/paper-texture.jpg);
-    background-size: cover;
-    mix-blend-mode: color-burn;
+    height: 10%;
+
+    background: linear-gradient(white 0%, var(--main-dark) 100%);
+    mix-blend-mode: multiply;
+    opacity: 0.5;
   }
+
 
   .swiper-container{
     /*background-color: black;*/
@@ -75,9 +101,11 @@
     width: 100%;
 
     height: 85%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -47%);
     text-align: center;
   }
+
+
 
   .swiper-wrapper{
     /*background-color: blue;*/
@@ -99,6 +127,17 @@
 
   }
 
+  .title-container{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5vh;
+  }
+
+  .title-container img{
+    width: 45vh;
+  }
+
   .swiper-pagination{
     padding-top: 100px;
   }
@@ -108,5 +147,5 @@
 }
 
 .swiper-pagination-bullet-active{
-  background: #479a9a;
+  background: var(--main-dark);
 }

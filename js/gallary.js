@@ -2,13 +2,59 @@ var Gallery = new Swiper('.swiper-container', {
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true,
+  },navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
-  autoplay:{
-    delay: 2500
+});
+
+
+
+Gallery.on('slideChange', function(){
+  $('.header').css("margin-top","0vh");
+  if(this.activeIndex < 1){
+    $('.header').css("margin-top","10vh");
+    $(':root').css("--main","#d4f6f1");
+  }else if(this.activeIndex < 11){
+    $(':root').css("--main","#afe6f9");
+    $(':root').css("--main-dark","#91c2d4");
+  }else if(this.activeIndex < 20){
+    $(':root').css("--main","#ffdc8c");
+    $(':root').css("--main-dark","#ddbc70");
+  }else if(this.activeIndex < 25){
+    $(':root').css("--main","#e7acb0");
+    $(':root').css("--main-dark","#d0979b");
+  }else if(this.activeIndex < 34){
+    $(':root').css("--main","#abbfd5");
+    $(':root').css("--main-dark","#869db5");
+  }else if(this.activeIndex < 46){
+    $(':root').css("--main","#b3a0d5");
+    $(':root').css("--main-dark","#9885b9");
+  }else if(this.activeIndex < 50){
+    $(':root').css("--main","#ffbbbb");
+    $(':root').css("--main-dark","#d59393");
   }
 });
 
 
+
+function vh(v) {
+  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  return (v * h) / 100;
+}
+
+function vw(v) {
+  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  return (v * w) / 100;
+}
+
+function vmin(v) {
+  return Math.min(vh(v), vw(v));
+}
+
+function vmax(v) {
+  return Math.max(vh(v), vw(v));
+}
 
 particlesJS('particles-container',
 
@@ -164,7 +210,7 @@ particlesJS('particles-container-2',
       }
     },
     "size": {
-      "value": 20,
+      "value": vh(2.4),
       "random": true,
       "anim": {
         "enable": true,
